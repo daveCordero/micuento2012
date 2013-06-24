@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<widget xmlns = "http://www.w3.org/ns/widgets"
+    xmlns:gap = "http://phonegap.com/ns/1.0"
+    id        = "com.phonegap.example"
+    version   = "1.0.0">
+
+<name>Mi Cuento 2012</name>
+
+<icon src="phoneGap/Icon@2x.png" gap:platform="android" gap:density="ldpi" />
+
+<gap:splash src="phoneGap/Default-Landscape@2x~ipad.png" gap:platform="android" gap:density="ldpi" />
+<gap:splash src="phoneGap/Default-Landscape@2x~ipad.png" gap:platform="android" gap:density="mdpi" />
+<gap:splash src="phoneGap/Default-Landscape@2x~ipad.png" gap:platform="android" gap:density="hdpi" />
+<gap:splash src="phoneGap/Default-Landscape@2x~ipad.png" gap:platform="android" gap:density="xhdpi" />
+
+<description>
+Selección de cuentos ganadores del concurso Mi Cuento Fantástico 2012, organizado por ADA, MEP, UNED, y Comunidad de Empresas de Comunicación de Costa Rica. 
+<br><br>
+Con la colaboración y patrocinio de Libros para Todos de Grupo Nación. 
+<br><br>
+Dirigido a estudiantes de primaria de tercero a sexto grado con el objetivo de estimular la capacidad creativa de la niñez y cultivar sus destrezas en lectoescritura, que son determinantes en el aprendizaje y el éxito escolar.
+</description>
+
+<preference name="permissions" value="none" />
+
+<author href="http://apoyo.librosparatodoscr.com" email="david.herrera@nacion.com">
+David Herrera Cordero | Libros para Todos | Grupo Nación
+</author>
+
+</widget>
