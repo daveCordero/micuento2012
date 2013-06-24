@@ -11,9 +11,7 @@
 <gap:splash src="phoneGap/Default-Landscape@2x~ipad.png" gap:platform="android" gap:density="xhdpi" />
 <description>
 Selección de cuentos ganadores del concurso Mi Cuento Fantástico 2012, organizado por ADA, MEP, UNED, y Comunidad de Empresas de Comunicación de Costa Rica. 
-<br><br>
 Con la colaboración y patrocinio de Libros para Todos de Grupo Nación. 
-<br><br>
 Dirigido a estudiantes de primaria de tercero a sexto grado con el objetivo de estimular la capacidad creativa de la niñez y cultivar sus destrezas en lectoescritura, que son determinantes en el aprendizaje y el éxito escolar.
 </description>
 <preference name="permissions" value="none" />
