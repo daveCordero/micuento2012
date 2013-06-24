@@ -5,10 +5,10 @@
     version   = "1.0.0">
 <name>Mi Cuento 2012</name>
 <icon src="phoneGap/Icon@2x.png" gap:platform="android" gap:density="ldpi" />
-<gap:splash src="phoneGap/Default-Landscape@2x~ipad.png" gap:platform="android" gap:density="ldpi" />
-<gap:splash src="phoneGap/Default-Landscape@2x~ipad.png" gap:platform="android" gap:density="mdpi" />
-<gap:splash src="phoneGap/Default-Landscape@2x~ipad.png" gap:platform="android" gap:density="hdpi" />
-<gap:splash src="phoneGap/Default-Landscape@2x~ipad.png" gap:platform="android" gap:density="xhdpi" />
+<gap:splash src="phoneGap/Default-Portrait_768x1004_.png" gap:platform="android" gap:density="ldpi" />
+<gap:splash src="phoneGap/Default-Portrait_768x1004_.png" gap:platform="android" gap:density="mdpi" />
+<gap:splash src="phoneGap/Default-Portrait_768x1004_.png" gap:platform="android" gap:density="hdpi" />
+<gap:splash src="phoneGap/Default-Portrait_768x1004_.png" gap:platform="android" gap:density="xhdpi" />
 <description>
 Selección de cuentos ganadores del concurso Mi Cuento Fantástico 2012, organizado por ADA, MEP, UNED, y Comunidad de Empresas de Comunicación de Costa Rica. 
 Con la colaboración y patrocinio de Libros para Todos de Grupo Nación. 
