@@ -70,6 +70,7 @@ body {
 	font-family: 'Muli', sans-serif;
 	font-weight: 400;
 	font-size:12px;
+	src: local('Muli'), url(../fonts/muli/v4/minRpKQdEvXRRS8oAbAtWvesZW2xOQ-xsNqO47m55DA.woff) format('woff');
 }
 
 a {
