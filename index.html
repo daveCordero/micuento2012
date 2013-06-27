@@ -15,13 +15,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
 26 junio 2013
 android Coco Altura ok incluye altura barra de navegador
-android Debo S3 Altura ok incluye altura barra de navegador
-<meta name="viewport" content="width=640px, initial-scale=.33, maximum-scale=.33" /> -->
-<meta name="viewport" content="height=720px, initial-scale=.33, maximum-scale=.33" />
+<meta name="viewport" content="width=640px, initial-scale=.33, maximum-scale=.33" />
+android Debo S3 Altura ok No incluye altura barra de navegador
+en chrome desempeño es pésimo, un poco mejor en S3 de Debo -->
+<meta name="viewport" content="height=720px, initial-scale=.45, maximum-scale=.45" />
 
-
+<!--
 <script type="text/javascript">
-
+//detecta ancho alto de pantalla
 //if (screen.height < 900) {
 	//alert('menor q 900');
 if (screen.height < 800) {
@@ -31,8 +32,17 @@ if (screen.height < 800) {
 	alert('mayor o igual q 800');
 }
 
+//detecta version Android
+var ua = navigator.userAgent;
+if( ua.indexOf("Android") >= 0 )
+{
+  var androidversion = parseFloat(ua.slice(ua.indexOf("Android")+8));
+  if (androidversion <= 2.3.6) { //version android Coco
+      // do whatever
+  }
+}
 </script>
-
+-->
 
 
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -675,7 +685,7 @@ $('.pausebtn').click(function() {
 
 function playAudio1() {
 	/* ogg no funciona para iOS */
-	audioElement.setAttribute('src', 'audio/CUENTO_PUEBLO_CHICO.mp3');
+	audioElement.setAttribute('src', 'audioOgg/CUENTO_PUEBLO_CHICO.mp3');
 	
 	audioElement.setAttribute('autoplay', 'autoplay');
 	$.get();
@@ -695,7 +705,7 @@ function pauseAudio1() {
 
 function playAudio2() {
 	/* ogg no funciona para iOS */
-	audioElement.setAttribute('src', 'audio/CUENTO_CAMINO_A_LA_ESCUELA.mp3');
+	audioElement.setAttribute('src', 'audioOgg/CUENTO_CAMINO_A_LA_ESCUELA.mp3');
 	
 	audioElement.setAttribute('autoplay', 'autoplay');
 	$.get();
@@ -715,7 +725,7 @@ function pauseAudio2() {
 
 function playAudio3() {
 	/* ogg no funciona para iOS */
-	audioElement.setAttribute('src', 'audio/CUENTO_LA_LUZ_DE_MI_CORAZON.mp3');
+	audioElement.setAttribute('src', 'audioOgg/CUENTO_LA_LUZ_DE_MI_CORAZON.mp3');
 	
 	audioElement.setAttribute('autoplay', 'autoplay');
 	$.get();
@@ -735,7 +745,7 @@ function pauseAudio3() {
 
 function playAudio4() {
 	/* ogg no funciona para iOS */
-	audioElement.setAttribute('src', 'audio/CUENTO_SUPERTAJADOR.mp3');
+	audioElement.setAttribute('src', 'audioOgg/CUENTO_SUPERTAJADOR.mp3');
 	
 	audioElement.setAttribute('autoplay', 'autoplay');
 	$.get();
@@ -755,7 +765,7 @@ function pauseAudio4() {
 
 function playAudio5() {
 	/* ogg no funciona para iOS */
-	audioElement.setAttribute('src', 'audio/CUENTO_VIAJE_A_BORDO_DEL_ILUSION.mp3');
+	audioElement.setAttribute('src', 'audioOgg/CUENTO_VIAJE_A_BORDO_DEL_ILUSION.mp3');
 	
 	audioElement.setAttribute('autoplay', 'autoplay');
 	$.get();
@@ -775,7 +785,7 @@ function pauseAudio5() {
 
 function playAudio6() {
 	/* ogg no funciona para iOS */
-	audioElement.setAttribute('src', 'audio/CUENTO_EL_JARDIN_DE_DON_BETO.mp3');
+	audioElement.setAttribute('src', 'audioOgg/CUENTO_EL_JARDIN_DE_DON_BETO.mp3');
 	
 	audioElement.setAttribute('autoplay', 'autoplay');
 	$.get();
