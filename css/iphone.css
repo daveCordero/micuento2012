@@ -46,6 +46,23 @@
 }
 */
 
+/* precarga */
+#pre-load-web {
+	width:100%;
+	position:absolute;
+	background:#FFF;
+	left:0px;
+	top:0px;
+	z-index:100000;
+}
+/*aqui centramos la imagen si coloco margin left -30 es por que la imagen mide 60 */
+#pre-load-web #imagen-load{
+	left:50%;
+	margin-left:-30px;
+	position:absolute;
+}
+/* fin precarga */
+
 body {
 	background-attachment: fixed;
 	background-color:#F4D584;

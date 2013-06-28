@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <style>
+            
+            #pre-load-web {width:100%;position:absolute;background:#92def8;left:0px;top:0px;z-index:100000}
+            /*aqui centramos la imagen si coloco margin left -30 es por que la imagen mide 60 */
+            #pre-load-web #imagen-load{left:50%;margin-left:-30px;position:absolute}
+            
+        </style>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js"></script>
+        <script>
+        $(document).ready(function(){
+        //eliminamos el scroll de la pagina
+        $("body").css({"overflow-y":"hidden"});
+        //guardamos en una variable el alto del que tiene tu browser que no es lo mismo que del DOM
+        var alto=$(window).height();
+        //agregamos en el body un div que sera que ocupe toda la pantalla y se muestra encima de todo
+        $("body").append("<div id='pre-load-web'><div id='imagen-load'><img src='http://preloaders.net/preloaders/359/Filling%20circles.gif'  /><br />Cargando...</div>");
+        //le damos el alto
+        $("#pre-load-web").css({height:alto+"px"});
+        //esta sera la capa que esta dento de la capa que muestra un gif
+        $("#imagen-load").css({"margin-top":(alto/2)-30+"px"});
+        }) 
+
+        $(window).load(function(){
+           $("#pre-load-web").fadeOut(1000,function()
+           { 
+               //eliminamos la capa de precarga
+               $(this).remove();
+               //permitimos scroll
+               $("body").css({"overflow-y":"auto"}); 
+
+           });        
+        }) 
+            
+        </script>
+    </head>
+    <body>
+        
+        <img src="http://www.fraakz.com/wp-content/uploads/2012/10/Wallpaper-HD.jpg" alt="" />
+        
+        
+    </body>
+    
+</html>
