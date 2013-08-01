@@ -311,7 +311,7 @@ iScroll.prototype = {
 		var that = this,
 			pos = dir == 'h' ? that.x : that.y,
 			size;
-		
+
 		if (!that[dir + 'Scrollbar']) return;
 
 		pos = that[dir + 'ScrollbarProp'] * pos;
@@ -491,9 +491,6 @@ iScroll.prototype = {
 	},
 	
 	_end: function (e) {
-		
-		//alert('hola');
-		
 		if (hasTouch && e.touches.length !== 0) return;
 
 		var that = this,
@@ -842,9 +839,6 @@ iScroll.prototype = {
 
 		// Check page X
 		page = that.pagesX.length - 1;
-		
-		//alert('Page: ' + page); //ultima pag o total de pags
-		
 		for (i=0, l=that.pagesX.length; i<l; i++) {
 			if (x >= that.pagesX[i]) {
 				page = i;
@@ -856,238 +850,7 @@ iScroll.prototype = {
 		sizeX = m.abs(x - that.pagesX[that.currPageX]);
 		sizeX = sizeX ? m.abs(that.x - x) / sizeX * 500 : 0;
 		that.currPageX = page;
-		
-		//alert('Page: ' + page); //correcto, pero muestra Alert 2 veces
-		switch(page){
-			case 0:
-				$("#nube2").show();
-				$("#nube5").show();
-				$("#ave2").show();
-				$("#flor2").show();
-			break;
-			
-			case 1:
-				//objetos page 1
-				$("#nube2").hide();
-				$("#nube5").hide();
-				$("#ave2").hide();
-				$("#flor2").hide();
-			break;
-			
-			case 2:
-				//
-			break;
-			
-			case 3:
-				$("#p05f1").hide();
-				$("#p05f2").hide();
-				$("#p05f3").hide();
-				$("#p05f4").hide();
-				$("#p05f5").hide();
-			break;
-			
-			case 4:
-				//alert('Page: ' + page);
-				$("#p06nube").hide();
-				$("#p06tear").hide();
-				$("#p05f1").show();
-				$("#p05f2").show();
-				$("#p05f3").show();
-				$("#p05f4").show();
-				$("#p05f5").show();
-				p05flor1down();
-				p05flor2down();
-				p05flor3down();
-				p05flor4down();
-				p05flor5down();
-			break;
-			
-			case 5:
-				//alert('Page: ' + page);
-				//$("#p06nube").stop(false, false);
-				$("#p05f1").hide();
-				$("#p05f2").hide();
-				$("#p05f3").hide();
-				$("#p05f4").hide();
-				$("#p05f5").hide();
-				$("#p06nube").show();
-				$("#p06tear").show();
-				$("#p07zacate1").hide();
-				p06nubeL();
-				//p06tear();
-			break;
-			
-			case 6:
-				//alert('Page: ' + page);
-				//$("#p06nube").stop(true, true);
-				$("#p06nube").hide();
-				$("#p06tear").hide();
-				$("#p07zacate2").hide();
-				$("#p07zacate1").show();
-				p07zacate1();
-			break;
-			
-			case 7:
-				$("#p07zacate1").hide();
-				$("#p07zacate2").show();
-				$("#p09pajaro1").hide();
-				$("#p09pajaro2").hide();
-				p07zacate2();
-			break;
-			
-			case 8:
-				$("#p07zacate2").hide();
-				//$("#p09pajaro1").show();
-				$("#p09pajaro2").show();
-				//p09pajaroMov();
-			break;
-			
-			case 9:
-				$("#p10hormiga").hide();
-			break;
-			
-			case 10:
-				$("#p09pajaro1").hide();
-				$("#p09pajaro2").hide();
-				$("#p11hormiga").hide();
-				$("#p10hormiga").show();
-				p10hormigaMov();
-			break;
-			
-			case 11:
-				$("#p10hormiga").hide();
-				$("#p12cuchara").hide();
-				$("#p11hormiga").show();
-				p11hormigaUp();
-			break;
-			
-			case 12:
-				$("#p11hormiga").hide();
-				$("#p13ojo").hide();
-				$("#p12cuchara").show();
-				p12rotarCuchara1();
-			break;
-			
-			case 13:
-				$("#p12cuchara").hide();
-				$("#p14lapizloco").hide();
-				$("#p13ojo").show();
-				//p13ojoOpen();
-				//alert('Page: ' + page);
-				/*
-				$("#p14capa1").hide();
-				$("#p14capa2").hide();*/
-			break;
-			
-			case 14:
-				$("#p13ojo").hide();
-				$("#p15lapiz").hide();
-				$("#p14lapizloco").show();
-				/*
-				$("#p14capa1").show();
-				$("#p14capa2").show();
-				p14capa1a();
-				p14capa2b();*/
-				p14lapizlocoUp();
-			break;
-			
-			case 15:
-				/*
-				$("#p14capa1").hide();
-				$("#p14capa2").hide();*/
-				$("#p14lapizloco").hide();
-				$("#p15lapiz").show();
-				p15lapizUp();
-			break;
-			
-			case 16:
-				$("#p15lapiz").hide();
-				$("#p17nube").hide();
-				$("#p17nube2").hide();
-			break;
-			
-			case 17:
-				$("#p17nube").show();
-				$("#p17nube2").show();
-				$("#p18olaFront").hide();
-				$("#p18tiburon").hide();
-				/*p17nube();
-				p17nube2();*/
-			break;
-			
-			case 18:
-				$("#p17nube").hide();
-				$("#p17nube2").hide();
-				$("#p19olaFront").hide();
-				$("#p19barco").hide();
-				$("#p18olaFront").show();
-				$("#p18tiburon").show();
-				/*p18olaFront();
-				p18tibu();*/
-			break;
-			
-			case 19:
-				$("#p18olaFront").hide();
-				$("#p18tiburon").hide();
-				/*$('#p20humo1').hide();
-				$('#p20humo2').hide();*/
-				$("#p19olaFront").show();
-				$("#p19barco").show();
-			break;
-			
-			case 20:
-				$("#p19olaFront").hide();
-				$("#p19barco").hide();
-				/*$('#p20humo1').show();
-				$('#p20humo2').show();
-				$("#p21Cerrados").hide();*/
-				p20humo1();
-				p20humo2();
-			break;
-			
-			case 21:
-				/*$('#p20humo1').hide();
-				$('#p20humo2').hide();
-				$("#p21Cerrados").show();*/
-				$("#p22flor").hide();
-				$("#p22floresGrupo").hide();
-				p21Close();
-			break;
-			
-			case 22:
-				//$("#p21Cerrados").hide();
-				$("#p22flor").show();
-				$("#p22floresGrupo").show();
-				p22flor();
-				p22flores();
-			break;
-			
-			case 23:
-				$("#p22flor").hide();
-				$("#p22floresGrupo").hide();
-			break;
-			
-			case 24:
-				//
-			break;
-			
-			case 25:
-				//
-			break;
-			
-			case 26:
-				//
-			break;
-			
-			case 27:
-				//
-			break;
-			
-			case 28:
-				//
-			break;
-		}
-		
+
 		// Check page Y
 		page = that.pagesY.length-1;
 		for (i=0; i<page; i++) {

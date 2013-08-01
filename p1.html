@@ -1,3 +1,35 @@
+<!--
+<!DOCTYPE html> -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN" "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<!-- android 26 junio 2013
+android Coco Altura ok incluye altura barra de navegador
+<meta name="viewport" content="width=640px, initial-scale=.33, maximum-scale=.33" />
+android Debo S3 Altura ok No incluye altura barra de navegador
+en chrome desempeño es pésimo, un poco mejor en S3 de Debo -->
+<meta name="viewport" content="height=720px, initial-scale=.45, maximum-scale=.45" />
+
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<title>Mi cuento fantástico 2012</title>
+<link href="css/iphone-min.css" rel="stylesheet" type="text/css">
+
+<link rel="shortcut icon" type="image/ico" href="favicon.ico" />
+
+<script type="text/javascript" src="src/googleapis/jquery.min.js"></script>
+<!-- afecta el jquery normal -->
+<script type="text/javascript" src="js/jQueryRotate-min.js"></script>
+
+<!-- touch scroll - slider -->
+<script type="text/javascript" src="src/iscroll-min.js"></script>
+
+<!-- funciones dave 
+<script type="text/javascript" src="js/funciones-min.js"></script>
+<script type="text/javascript" src="js/funciones.js"></script>-->
+<script type="text/javascript">
 var audioElement = document.createElement('audio');
 audioElement.setAttribute('autoplay', 'autoplay');
 $.get();
@@ -735,61 +767,6 @@ $(document).ready(function() {
 	//ave1Mov();
 	flor2Mov();
 	
-	/*
-	p05flor1down();
-	p05flor2down();
-	p05flor3down();
-	p05flor4down();
-	p05flor5down();
-	
-	p06nubeL();*/
-	p06tear();
-	
-	/*
-	//p07nubeMov();
-	p07zacate1();
-	p07zacate2();*/
-	
-	p09pajaroMov();
-	
-	/*p10hormigaMov();
-	
-	p11hormigaUp();
-	
-	p12rotarCuchara1();*/
-	
-	p13ojoOpen();
-	
-	p14capa1a();
-	p14capa2b();
-	
-	/*p14lapizlocoUp();
-	
-	p15lapizUp();*/
-	
-	p17nube();
-	p17nube2();
-	
-	p18olaFront();
-	p18tibu();
-	
-	p19barco();
-	p19olaFront();
-	
-	/*p20humo1();
-	p20humo2();*/
-	
-	//p21Close();
-	
-	/*p22flor();
-	p22flores();*/
-	
-	//pantallacompleta();
-	//openFullWin();
-	//window.open("this","","fullscreen=yes,scrollbars=1,resizable=1");
-	
-	//var tnube2go = setTimeout(nube2Mov(),1000);
-	//var tnube5go = setTimeout(nube5Mov(),1000);
 });/* fin ready */
 
 
@@ -807,3 +784,84 @@ function openFullWin(){
 	window.open("index.html","","fullscreen=yes,scrollbars=1,resizable=1")
 }*/
 //openFullWin();
+</script>
+
+</head>
+<body>
+
+<div id="wrapper">
+	<div id="scroller">
+		<ul id="thelist">
+        	
+			<li id="pg00"><!-- portada -->
+                
+                <div id="pueblo" class="blockAbsolute"></div>
+                <div id="nube1" class="blockAbsolute"></div>
+                <div id="pirata" class="blockAbsolute"></div>
+                <div id="familia" class="blockAbsolute"></div>
+                <div id="nube2" class="blockAbsolute"></div>
+                <div id="tituloPortada" class="blockAbsolute"></div>
+                <div id="nube3" class="blockAbsolute"></div>
+                <div id="nube4" class="blockAbsolute"></div>
+                <div id="nube5" class="blockAbsolute"></div>
+                <div id="flor1" class="blockAbsolute"></div>
+                <div id="flor2" class="blockAbsolute"></div>
+                <div id="ave1" class="blockAbsolute" onclick="ave1Sel();"></div>
+                <div id="ave2" class="blockAbsolute"></div>
+            </li><!-- fin li 00 -->
+            
+			<li id="pg01">
+            	<!--certamen-->
+                <a href="javascript:void(0)" class="btnZoom" id="zoombtn1" onclick="zoomImg01();">+</a>
+    	    </li><!-- fin li 01 -->
+            
+            <li id="pg24">
+            	<a href="javascript:void(0)" class="btnZoom" id="zoombtn23" onclick="zoomImg23();">+</a>
+            </li><!-- fin li 24 -->
+            
+            <li id="pg25">
+            	<a href="javascript:void(0)" class="btnZoom" id="zoombtn24" onclick="zoomImg24();">+</a>
+            </li><!-- fin li 25 -->
+            
+            <li id="pg26">
+            	<a href="javascript:void(0)" class="btnZoom" id="zoombtn25" onclick="zoomImg25();">+</a>
+            </li><!-- fin li 26 -->
+            
+            <li id="pg27">
+            	<a href="javascript:void(0)" class="btnZoom" id="zoombtn26" onclick="zoomImg26();">+</a>
+            </li><!-- fin li 27 -->
+            
+            <li id="pg28">
+            	<a href="javascript:void(0)" class="btnZoom" id="zoombtn27" onclick="zoomImg27();">+</a>
+            </li><!-- fin li 28 -->
+            
+            <li id="pg29"><!--contraportada-->
+            	<a href="javascript:void(0)" class="btnIni" id="btiniFin" onclick="myScroll.scrollToPage('0', 0); return false">inicio</a>
+                <a href="javascript:void(0)" class="btnZoom" id="zoombtn28" onclick="zoomImg28();">+</a>
+            </li><!-- fin li 29 -->
+            
+		</ul>
+	</div><!-- fin scroller -->
+</div><!-- fin wrapper -->
+
+<div id="nav">
+	<!--<div id="prev" class="navArrows" onclick="myScroll.scrollToPage('prev', 0); return false;">&larr;</div>-->
+    <div id="prev" class="navArrows">&larr;</div>
+	<ul id="indicator">
+    	
+		<li class="active">1</li>
+		<li>2</li>
+		<li>3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>6</li>
+		<li>7</li>
+        
+	</ul>
+    <div id="next" class="navArrows">&rarr;</div>
+    
+</div><!-- fin nav -->
+
+
+</body>
+</html>
